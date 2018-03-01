@@ -3,7 +3,7 @@
 
 using namepace std;
 
-class Ciudad {
+class City {
 
 private:
 	int row;
@@ -13,7 +13,7 @@ private:
 	Vehicle* vehicles;
 
 public:
-	Ciudad(int r,int c,int nC);
+	City(int r,int c,int nC);
 	Vehicle TakeCar(int i);
 	void UpdateCar(int i, Vehicle v);
 
