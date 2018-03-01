@@ -12,7 +12,7 @@ private:
 
 public:
 	City(int r,int c,int nC);
-	Vehicle TakeCar(int i);
+	Vehicle& TakeCar(int i);
 	void UpdateCar(int i, vehicle v);
 
 };

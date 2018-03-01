@@ -10,9 +10,9 @@ Ride::Ride(int sx, int sy, int ex, int ey, int es, int lf) {
 	
 	int dx = sx > ex ? sx - ex : ex - sx;
 	int dy = sy > ey ? sy - ey : ey - sy;
-	rideLength = dx + dy;
+	lastestStart = lf - dx - dy; // TODO igual es -1
 }
 
-int Ride::Length() {
-	return rideLength;
+int Ride::GetLastestStartTime() {
+	return lastestStart;
 }

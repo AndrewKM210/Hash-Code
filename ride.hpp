@@ -4,9 +4,9 @@ class Ride {
 		int endX, endY;
 		int earliestStart, lastestFinish;
 		
-		int rideLength;
+		int lastestStart;
 		
 	public:
 		Ride(int sx, int sy, int ex, int ey, int es, int lf);
-		int Length();
+		int GetLastestStartTime();
 }

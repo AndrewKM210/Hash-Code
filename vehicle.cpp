@@ -31,3 +31,17 @@ int Vehicle::TimeToDest(int x,int y){
 	}
 	return Tfinal + xe + ye;
 }
+
+void Vehicle::AssignRide(int id) {
+	assignedRides.push(id);
+}
+
+string Vehicle::GetAssignedRides() {
+	string result = "";
+	while (!assignedRides.empty()) {
+		result += to_string(assignedRides.front());
+		assignedRides.pop();
+		if (!assignedRides.empty()) result += " ";
+	}
+	return result;
+}

@@ -15,7 +15,7 @@ City::City(int r, int c,int nC){
 	}
 }
 
-Vehicle City::TakeCar(int i){
+Vehicle& City::TakeCar(int i){
 	return vehicles[i];
 }
 
