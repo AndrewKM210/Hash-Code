@@ -6,7 +6,7 @@ Vehicle::Vehicle(int idV){
 	posFinalY = 0;
 }
 
-void Vehicle::move(int posx, int posy){
+void Vehicle::move(int x, int y){
 	posFinalX = x;
 	posFinalY = y;
 }
