@@ -1,8 +1,8 @@
-#include "ciudad.hpp"
+#include "city.hpp"
 
 
 
-Ciudad::Ciudad(int r, int c,int nC){
+City::City(int r, int c,int nC){
 	this->row = r;
 	this->column = c;
 	this->numCar = nC;
@@ -14,11 +14,14 @@ Ciudad::Ciudad(int r, int c,int nC){
 	}
 }
 
-Vehicle Ciudad::TakeCar(int i){
+Vehicle City::TakeCar(int i){
 	return vehicles[i];
 }
 
-void UpdateCar(int i, Vehicle v){
+void City::UpdateCar(int i, Vehicle v){
 	vehicles[i] = v;
 }
 
+void City::OccupiedCar(int id){
+	free.erase(id);
+}
