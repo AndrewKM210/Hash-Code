@@ -1,38 +1,27 @@
-#include "node.h"
- 
-// Constructor por defecto
-template<typename T>
- 
-Node<T>::Node()
-{
-    data = NULL;
-    next = NULL;
-}
+#include "node.hpp"
  
 // Constructor por parámetro
-template<typename T>
-Node<T>::Node(T data_)
+
+Node::Node(int dataS, int sx_, int sy_, int fx_, int fy_, int lastesF_)
 {
-    data = data_;
+    data_ = dataS;
+	sx = sx_;
+	sy = sy_;
+	fx = fx_;
+	fy = fy_;
+	lastestF = lastesF_;
     next = NULL;
 }
  
 // Eliminar todos los Nodos
-template<typename T>
-void Node<T>::delete_all()
+
+void Node::delete_all()
 {
     if (next)
         next->delete_all();
     delete this;
 }
  
-// Imprimir un Nodo
-template<typename T>
-void Node<T>::print()
-{
-    //cout << "Node-> " << "Dato: " << dato << " Direcion: " << this << " Siguiente: " << next << endl;
-    cout << data << "-> ";
-}
  
-template<typename T>
-Node<T>::~Node() {}
+
+Node::~Node() {}

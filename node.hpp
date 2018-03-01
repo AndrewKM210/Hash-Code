@@ -5,19 +5,23 @@
  
 using namespace std;
  
-template <class T>
+//template <class T>
  
 class Node
 {
     public:
-        Node();
-        Node(T);
+        Node(int data_, int sx, int sy, int fx, int fy, int lastestF);
         ~Node();
  
         Node *next;
-        T data;
+        int data_;
+		int sx;
+		int sy;
+		int fx;
+		int fy;
+		int lastestF;
 		
- 
+		
         void delete_all();
         void print();
 };

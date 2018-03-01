@@ -6,7 +6,7 @@
 #include <string>
 #include <stdlib.h>
  
-#include "node.h"
+#include "node.hpp"
 #include "node.cpp"
  
 using namespace std;
