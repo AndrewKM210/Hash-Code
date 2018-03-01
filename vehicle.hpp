@@ -9,8 +9,8 @@ class Vehicle
 public:
 	Vehicle(int idV);
 	~Vehicle();
-	void move(int posx, int posy);
-	int TimeToDest(Vehicle v,int x,int y);
+	void move(int x, int y);
+	int TimeToDest(int x,int y);
 	
 	int id;
 
@@ -19,7 +19,7 @@ public:
 	
 	int Tfinal;
 	
-	queue<int> assignedRides();
+	queue<int> assignedRides;
 	
 	void AssignRide(int id);
 	string GetAssignedRides();
