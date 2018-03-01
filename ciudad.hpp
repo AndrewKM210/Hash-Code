@@ -1,4 +1,5 @@
 #include "vehicle.h"
+#include <set>
 
 using namepace std;
 
@@ -8,6 +9,7 @@ private:
 	int row;
 	int column;
 	int numCar;
+	set<Vehicle> free;
 	Vehicle* vehicles;
 
 public:
