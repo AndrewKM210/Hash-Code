@@ -12,8 +12,7 @@ private:
 	Vehicle vehicles[numCar];
 
 public:
-	Ciudad(int row,int column);
-	void CreateCars(Vehicle v);
+	Ciudad(int r,int c,int nC);
 	Vehicle TakeCar(int i);
 	void UpdateCar(int i, Vehicle v);
 
