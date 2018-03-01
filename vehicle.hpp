@@ -9,9 +9,12 @@ public:
 	void move(int posx, int posy);
 	
 	int id;
-	int x;
-	int y;
+
+	int posFinalX;
+	int posFinalY;
 	
+	int T;
+
 	bool enRecorrido;
 	
 };
