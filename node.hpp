@@ -6,12 +6,8 @@
 using namespace std;
  
 //template <class T>
-
-struct Node {
-	
-}
  
-class RideList
+class Node
 {
     public:
         Node(int data_, int sx, int sy, int fx, int fy, int lastestF);

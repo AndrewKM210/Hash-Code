@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <set>
+#include <list>
 #include "city.hpp"
 #include "vehicle.hpp"
 #include "ride.hpp"
@@ -25,26 +26,36 @@ int main(int argc, char **argv) {
 		ent >> bonus >> steps;
 		
 		City city(rows, columns, numVehicles);
+		list<Ride> rides;
 		
 		// Leer datos de rides
 		for (int i = 0; i < numRides; i++) {
 			int sx, sy, ex, ey, es, lf;
 			ent >> sx >> sy >> ex >> ey >> es >> lf;
 			
-			// recorrer toda la lista para ver donde meterlo
-			// meterlo en esa posicion
+			int posIns = 0;
+			for (list<Ride>::iterator it = rides.begin(); it != rides.end(); it++) {
+				if (*it.es < es) {
+					posIns++;
+				} else {
+					break;
+				}
+			}
+			Ride newRide(sx, sy, ex, ey, es, lf);
+			rides.insert(posIns, newRide);
 		}
 			
 		// Asignar rides a todos los vehiculos disponibles (si hay rides que quedan)
-		// por cada recorrido que queda
+		int idRide = 0;
+		for (list<Ride>::iterator it = rides.begin(); it != rides.end(); it++) {
 			int targetX, targetY;
 			int bestAvailableTime, bestVehicleId;
-			city.FindBestVehicleForRide(/*startx, starty*/, bestAvailableTime, bestVehicleId);
-			if (bestAvailableTime > /*ride*/.GetLastestStartTime()) {
-				/* descartar recorrido */
-			} else {
-				city.TakeCar(bestVehicleId).AssignRide(/*id_ride*/);
+			city.FindBestVehicleForRide(*it.sx, *it.sy, bestAvailableTime, bestVehicleId);
+			if (bestAvailableTime <= *it.GetLastestStartTime()) {
+				city.TakeCar(bestVehicleId).AssignRide(idRide);
 			}
+			idRide++;
+		}
 		
 		// Escribir por salida
 		ofstream sal(argv[2]);
