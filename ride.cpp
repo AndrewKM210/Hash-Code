@@ -1,6 +1,11 @@
 #include "ride.hpp"
 
-Ride::Ride(int sx, int sy, int ex, int ey, int es, int lf) {
+Ride::Ride() {
+	// ola
+}
+
+void Ride::init(int idr, int sx, int sy, int ex, int ey, int es, int lf) {
+	idRide = idr;
 	startX = sx;
 	startY = sy;
 	endX = ex;
@@ -10,7 +15,8 @@ Ride::Ride(int sx, int sy, int ex, int ey, int es, int lf) {
 	
 	int dx = sx > ex ? sx - ex : ex - sx;
 	int dy = sy > ey ? sy - ey : ey - sy;
-	lastestStart = lf - dx - dy; // TODO igual es -1
+	length = dx + dy;
+	lastestStart = lf - length; // TODO igual es -1
 }
 
 int Ride::GetLastestStartTime() {

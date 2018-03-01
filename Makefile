@@ -1,16 +1,16 @@
 all: main
 
 main: main.o city.o ride.o vehicle.o
-	g++ main.o city.o ride.o vehicle.o -o main
+	g++ -std=c++11 main.o city.o ride.o vehicle.o -o main
 	
 main.o: main.cpp
-	g++ main.cpp -c
+	g++ -std=c++11 main.cpp -c
 
 city.o: city.cpp city.hpp
-	g++ city.cpp -c
+	g++ -std=c++11 city.cpp -c
 	
 ride.o: ride.cpp ride.hpp
-	g++ ride.cpp -c
+	g++ -std=c++11 ride.cpp -c
 	
 vehicle.o: vehicle.cpp vehicle.hpp
-	g++ vehicle.cpp
+	g++ -std=c++11 vehicle.cpp -c

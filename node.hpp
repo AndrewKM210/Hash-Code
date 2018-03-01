@@ -6,6 +6,11 @@
 using namespace std;
  
 //template <class T>
+struct Nodo {
+	int sx, sy, ex, ey, es, lf;
+	Node
+}
+
  
 class Node
 {

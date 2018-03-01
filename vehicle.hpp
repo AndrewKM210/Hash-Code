@@ -2,14 +2,16 @@
 #define VEHICLE_HPP
 
 #include <queue>
+#include <iostream>
 #include <string>
+
+using namespace std;
 
 class Vehicle
 {
 public:
-	Vehicle(int idV);
-	~Vehicle();
-	void move(int x, int y);
+	Vehicle();
+	void SetId(int idV);
 	int TimeToDest(int x,int y);
 	
 	int id;
@@ -21,7 +23,7 @@ public:
 	
 	queue<int> assignedRides;
 	
-	void AssignRide(int id);
+	void AssignRide(int idR, int fx, int fy, int newT);
 	string GetAssignedRides();
 	
 };
