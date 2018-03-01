@@ -7,7 +7,8 @@ Ciudad::Ciudad(int r, int c,int nC){
 
 	vehicles = malloc(sizeof(Vehicle)*numCar);
 	for(int i = 0; i < numCar; i++){
-		vehicles[i] = new Vehicle();
+		vehicles[i] = new Vehicle(i);
+		free.insert(vehicles[i].id);
 	}
 }
 
@@ -18,3 +19,4 @@ Vehicle Ciudad::TakeCar(int i){
 void Ciudad::UpdateCar(int i, Vehicle v){
 	vehicles[i] = v;
 }
+
