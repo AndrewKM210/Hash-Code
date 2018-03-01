@@ -41,16 +41,13 @@ int main(int argc, char **argv) {
 		// Asignar rides a todos los vehiculos disponibles (si hay rides que quedan)
 		// por cada recorrido que queda
 			int targetX, targetY;
-			int bestScore = steps + 1;
-			int bestVehicleId = -1;
-			ciudad.encontrar
-				// calcular puntuacion
-				if (/* score */ > bestScore) {
-					bestScore = ... ;
-					bestVehicleId = ... ;
-				}
-			if (bestScore < /* tiempo finaliza)
-			// asignar el recorrido a bestVehicleId y quitarlo de la lista
+			int bestAvailableTime, bestVehicleId;
+			ciudad.FindBestVehicleForRide(/*startx, starty*/, bestAvailableTime, bestVehicleId);
+			if (bestAvailableTime > /*ride.GetLastestStartTime()*/) {
+				/* descartar */
+			} else {
+				/* asignar ride i al vehiculo bestVehicleId */
+			}
 		
 	}
 	
