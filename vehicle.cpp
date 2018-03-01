@@ -1,19 +1,14 @@
 #include "vehicle.hpp"
 
 Vehicle::Vehicle(int idV){
-	this->id = idV;
-	this->x = 0;
-	this->y = 0;
-	this->enRecorrido = false;
+	id = idV;
+	posFinalX = 0;
+	posFinalY = 0;
 }
 
-Vehicle::~Vehicle(){
-	
-}
-
-void Vehicle::move(int posx, int posy){
-	this->x = x;
-	this->y = y;
+void Vehicle::move(int x, int y){
+	posFinalX = x;
+	posFinalY = y;
 }
 
 

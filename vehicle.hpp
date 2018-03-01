@@ -15,8 +15,6 @@ public:
 	int posFinalY;
 	
 	int Tfinal;
-
-	bool enRecorrido;
 	
 };
 
