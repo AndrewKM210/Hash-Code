@@ -5,9 +5,9 @@ Ciudad::Ciudad(int r, int c,int nC){
 	this->column = c;
 	this->numCar = nC;
 
-	Vehicle v;
+	vehicles = malloc(sizeof(Vehicle)*numCar);
 	for(int i = 0; i < numCar; i++){
-		this->vehicles[i] = v;
+		vehicles[i] = new Vehicle();
 	}
 }
 

@@ -1,5 +1,4 @@
-#ifndef CIUDAD_HPP
-#define CIUDAD_HPP
+#include "vehicle.h"
 
 using namepace std;
 
@@ -9,7 +8,7 @@ private:
 	int row;
 	int column;
 	int numCar;
-	Vehicle vehicles[numCar];
+	Vehicle* vehicles;
 
 public:
 	Ciudad(int r,int c,int nC);

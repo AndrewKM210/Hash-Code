@@ -18,7 +18,6 @@ int main(int argc, char **argv) {
 		cout << "No se encuentra el fichero de entrada" << endl;
 	} else {
 		
-		Ciudad ciudad;
 		Ride* rides;
 		int steps;
 		
@@ -28,6 +27,7 @@ int main(int argc, char **argv) {
 		ent >> numVehicles >> numRides;
 		ent >> bonus >> steps;
 		
+		Ciudad ciudad(rows, columns, numVehicles);
 		// TODO inicializar ciudad y sus vehiculos
 		
 		rides = malloc(sizeof(Ride) * numrides);
