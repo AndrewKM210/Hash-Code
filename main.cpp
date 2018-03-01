@@ -9,7 +9,7 @@ using namespace std;
 int main(int argc, char **argv) {
 	
 	if (argc != 2) {
-		cout << "./" << argv[0] << " <fich_entrada>" << endl;s
+		cout << "./" << argv[0] << " <fich_entrada>" << endl;
 		return 1;
 	}
 	
