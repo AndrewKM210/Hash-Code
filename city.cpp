@@ -1,13 +1,16 @@
 #include "ciudad.hpp"
 
+
+
 Ciudad::Ciudad(int r, int c,int nC){
 	this->row = r;
 	this->column = c;
 	this->numCar = nC;
 
-	Vehicle v;
+	vehicles = malloc(sizeof(Vehicle)*numCar);
 	for(int i = 0; i < numCar; i++){
-		this->vehicles[i] = v;
+		vehicles[i] = new Vehicle(i);
+		free.insert(vehicles[i].id);
 	}
 }
 
@@ -15,6 +18,7 @@ Vehicle Ciudad::TakeCar(int i){
 	return vehicles[i];
 }
 
-Vehicle UpdateCar(int i, Vehicle v){
+void UpdateCar(int i, Vehicle v){
 	vehicles[i] = v;
 }
+
