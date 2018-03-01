@@ -1,4 +1,4 @@
-#include "ride.h"
+#include "ride.hpp"
 
 Ride::Ride(int sx, int sy, int ex, int ey, int es, int lf) {
 	startX = sx;
