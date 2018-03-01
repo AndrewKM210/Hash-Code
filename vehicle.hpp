@@ -15,7 +15,6 @@ public:
 	int posFinalY;
 	
 	int Tfinal;
-
 	
 };
 
