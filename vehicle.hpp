@@ -1,5 +1,5 @@
-#ifndef VEHICLE_H
-#define VEHICLE_H
+#ifndef VEHICLE_HPP
+#define VEHICLE_HPP
 
 class Vehicle
 {
@@ -20,4 +20,4 @@ public:
 	
 };
 
-#endif // VEHICLE_H
+#endif // VEHICLE_HPP
