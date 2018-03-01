@@ -4,13 +4,16 @@
 class vehicle
 {
 public:
-	vehicle();
+	vehicle(int idV);
 	~vehicle();
 	void move(int posx, int posy);
 	
-private:
+	int id;
 	int x;
 	int y;
+	
+	bool enRecorrido;
+	
 };
 
 #endif // VEHICLE_H
