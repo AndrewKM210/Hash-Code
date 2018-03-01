@@ -1,7 +1,7 @@
 #include "vehicle.h"
 #include <set>
 
-using namepace std;
+using namespace std;
 
 class City {
 

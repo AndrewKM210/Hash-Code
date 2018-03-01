@@ -3,6 +3,7 @@
 
 
 City::City(int r, int c,int nC){
+
 	this->row = r;
 	this->column = c;
 	this->numCar = nC;
