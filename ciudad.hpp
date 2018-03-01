@@ -1,9 +1,7 @@
 #ifndef CIUDAD_HPP
 #define CIUDAD_HPP
 
-#include <vehicle.h>
-
-using namespace std;
+using namepace std;
 
 class Ciudad {
 
@@ -18,8 +16,6 @@ public:
 	Vehicle TakeCar(int i);
 	void UpdateCar(int i, Vehicle v);
 
-
-#endif // CIUDAD_HPP
 };
 
 

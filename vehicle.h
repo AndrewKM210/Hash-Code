@@ -1,11 +1,11 @@
 #ifndef VEHICLE_H
 #define VEHICLE_H
 
-class Vehicle
+class vehicle
 {
 public:
-	Vehicle(int idV);
-	~Vehicle();
+	vehicle(int idV);
+	~vehicle();
 	void move(int posx, int posy);
 	
 	int id;

@@ -1,17 +1,17 @@
 #include "vehicle.h"
 
-Vehicle::Vehicle(int idV){
+vehicle::vehicle(int idV){
 	this->id = idV;
 	this->x = 0;
 	this->y = 0;
 	this->enRecorrido = false;
 }
 
-Vehicle::~Vehicle(){
+vehicle::~vehicle(){
 	
 }
 
-void Vehicle::move(int posx, int posy){
+void vehicle::move(int posx, int posy){
 	this->x = x;
 	this->y = y;
 }
