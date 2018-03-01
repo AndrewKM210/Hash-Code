@@ -1,6 +1,6 @@
 #include "vehicle.h"
 
-using namepace std;
+using namespace std;
 
 class Ciudad {
 

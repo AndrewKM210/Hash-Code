@@ -15,6 +15,6 @@ Vehicle Ciudad::TakeCar(int i){
 	return vehicles[i];
 }
 
-Vehicle UpdateCar(int i, Vehicle v){
+void Ciudad::UpdateCar(int i, Vehicle v){
 	vehicles[i] = v;
 }
