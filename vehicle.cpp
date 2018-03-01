@@ -17,22 +17,22 @@ void vehicle::move(int posx, int posy){
 }
 
 
-int TimeToDest(vehicle v,int x,int y){
+int TimeToDest(int x,int y){
 	int xe;
 	int ye;
 
 	if(x > v.posFinalX){
-		xe = x - v.posFinalX;
+		xe = x - posFinalX;
 	}
 	else{
-		xe = v.posFinalX - x;
+		xe = posFinalX - x;
 	}
 
 	if(y > v.posFinalY){
-		ye = y - v.posFinalY;
+		ye = y - posFinalY;
 	}
 	else{
-		ye = v.posFinalX - y;
+		ye = posFinalX - y;
 	}
-	return v.T + xe + ye;
+	return T + xe + ye;
 }
